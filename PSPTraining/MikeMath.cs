@@ -18,7 +18,7 @@ namespace PSPTraining
 
             if (nums.Length % 2 == 0)
             {
-                return (nums[nums.Length / 2] + nums[(nums.Length / 2) - 1]) / 2;
+                return (nums[nums.Length / 2] + nums[(nums.Length / 2) - 1]) / 2.0;
             }
             else
             {

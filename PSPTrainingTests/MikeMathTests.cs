@@ -26,7 +26,7 @@ namespace PSPTrainingTests
         [TestMethod]
         public void TestEvenElements()
         {
-            Assert.AreEqual(3, MikeMath.Median(new int[] { 1, 2, 4, 10 }));
+            Assert.AreEqual(3.5, MikeMath.Median(new int[] { 1, 2, 5, 10 }));
         }
 
         [TestMethod]
