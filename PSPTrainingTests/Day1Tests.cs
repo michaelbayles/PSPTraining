@@ -9,7 +9,7 @@ namespace PSPTrainingTests
     public class Day1Tests
     {
         [TestMethod]
-        public void TestDavisData()
+        public void TestDavisMedianData()
         {
             Assert.AreEqual(51, new Day1().CalculateMedianFromFile("Day1Input.txt"));
         }

@@ -34,5 +34,17 @@ namespace PSPTrainingTests
         {
             Assert.AreEqual(3, MikeMath.Median(new int[] { 2, 3, 4 }));
         }
+
+        [TestMethod]
+        public void TestCanParsePercentage()
+        {
+            Assert.AreEqual(0.3, MikeMath.PercentageStringToDouble("30%"));
+        }
+
+        [TestMethod]        
+        public void TestNoPercentageFound()
+        {
+            Assert.AreEqual(0, MikeMath.PercentageStringToDouble("adsf"));
+        }
     }
 }
