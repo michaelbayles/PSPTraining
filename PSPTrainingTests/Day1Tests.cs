@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PSPTraining;
+using System.IO;
 
 namespace PSPTrainingTests
 {
@@ -11,6 +12,13 @@ namespace PSPTrainingTests
         public void TestDavisData()
         {
             Assert.AreEqual(51, new Day1().CalculateMedianFromFile("Day1Input.txt"));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FileNotFoundException))]
+        public void TestFileNotFound()
+        {
+            new Day1().CalculateMedianFromFile("asdf.txt");
         }
     }
 }
