@@ -4,7 +4,7 @@
 
 1. Read input data
 1. Parse the task data into `List<double>`
-1. Calculate sum of all tasks
+1. Calculate sum of all tasks and set to `TotalHours`
 1. Create `List<Week>` that will be used later for output
 1. Foreach task estimate:
     1. If current task fits in current week (`ConsumableHours` - task estimate > 0)
@@ -31,7 +31,6 @@ public class Week
     public double ConsumedHours { get; set; }
     public double CumulativePlanHours { get; set; }
     public double PlannedValue { get; set; }
-    public double CumulativePlannedValue { get; set; }
-    
+    public double CumulativePlannedValue { get; set; }    
 }
 ```
