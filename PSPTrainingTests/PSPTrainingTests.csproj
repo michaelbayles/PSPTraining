@@ -58,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PhaseParserTests.cs" />
     <Compile Include="Day2Tests.cs" />
+    <Compile Include="Day3Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PSPTraining\PSPTraining.csproj">
@@ -70,6 +71,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Day2Input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EV.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

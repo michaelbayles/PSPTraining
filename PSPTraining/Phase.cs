@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PSPTraining
+﻿namespace PSPTraining
 {
     /// <summary>
     /// Data class to encapsulate a PSP phase
