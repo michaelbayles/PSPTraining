@@ -7,7 +7,7 @@ namespace PSPTrainingTests
     public class Day3Tests
     {
         [TestMethod]
-        public void TestDavisEvData()
+        public void TestDavisPvData()
         {
             var csv = new Day3().CreatePlannedValueCsv("EV.txt");
             var rows = csv.Split('\n');

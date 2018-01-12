@@ -13,9 +13,10 @@ namespace PSPTraining
         {
             var estimates = File.ReadAllLines(inputFile).Select(a => double.Parse(a)).ToList();
             var totalHours = estimates.Sum();
+            var weekNumber = 1;
 
             List<Week> weeks = new List<Week>();
-            Week currentWeek = new Week(DefaultHours, DefaultHours, DefaultHours, 0);
+            Week currentWeek = new Week(weekNumber, DefaultHours, DefaultHours, DefaultHours, 0);
             weeks.Add(currentWeek);
 
             for (int i = 0; i < estimates.Count; i++)
@@ -30,7 +31,7 @@ namespace PSPTraining
                 {
                     SubmitPlannedValue(totalHours, currentWeek);
 
-                    var nextWeek = new Week(DefaultHours, currentWeek.CumulativePlanHours + DefaultHours, DefaultHours + currentWeek.ConsumableHours, currentWeek.CumulativePlannedValue);
+                    var nextWeek = new Week(++weekNumber, DefaultHours, currentWeek.CumulativePlanHours + DefaultHours, DefaultHours + currentWeek.ConsumableHours, currentWeek.CumulativePlannedValue);
                     currentWeek = nextWeek;
                     weeks.Add(currentWeek);
 
@@ -52,7 +53,7 @@ namespace PSPTraining
             string ret = Header;
             for (int i = 0; i < weeks.Count; i++)
             {
-                //Output is 1 indexed
+                //Output is 1 indexed                
                 ret += $"{i + 1},{weeks[i].ToPvCsv()}\n";
             }
 

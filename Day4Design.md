@@ -3,6 +3,7 @@
 ## Basic Logic
 
 1. Read task estimate input data and pass in to `CreatePlannedValueWeeksFromInput` to get a `List<Week>` with planned value calculated for each `Week`
+1. Parse the task estimates to create `List<Task> Tasks` with `Id` and `Planned` set
 1. Parse the weekly task data and update each `Week` object with its corresponding `Task`s based on the `Number` property
 1. Parse the weekly actual hours and update each `Week` object with its corresponding `ActualHours`
 1. Add `ActualHours` to `CumulativeActualHours` and set the next `Week`'s `CumulativeActualHours` to the current `CumulativeActualHours`
@@ -22,6 +23,12 @@
 ```
 public class EarnedValueCalculator
 {
+    public List<Week> Weeks { get; }
+    public List<Task> Tasks { get; }
+
+    public EarnedValueCalculator(string plannedValueInput, string weeklyTaskDataFile, string weeklyActualsFile)
+
+    public string OutputCsv()
     public double WeeksRemainingUsingCumulative(int asOfWeek)
     public double WeeksRemainingUsingWeek(int asOfWeek)
 }
@@ -56,7 +63,7 @@ public class Week
 ```
 public class Task
 {
-    public string Name { get; set; }
+    public int Id { get; set; }
     public double Planned { get; set; }
     public double Actual { get; set; }
 }

@@ -46,6 +46,7 @@
     <Compile Include="Day1.cs" />
     <Compile Include="Day2.cs" />
     <Compile Include="Day3.cs" />
+    <Compile Include="EarnedValueCalculator.cs" />
     <Compile Include="PhaseParser.cs" />
     <Compile Include="MikeMath.cs" />
     <Compile Include="Phase.cs" />
