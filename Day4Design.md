@@ -15,6 +15,7 @@
     1. Set `CumulativeEarnedValue` of next `Week` to current `CumulativeEarnedValue`
 
 1. Output the `List<Week>` as a CSV using the `ToEvCsv()` method. This method will be able to calculate planned/actual on the fly so we don't have to store them
+1. Output result of `WeeksRemainingUsingCumulative(int asOfWeek)` and `WeeksRemainingUsingWeek(int asOfWeek)`
 
 ### EarnedValueCalculator Class Definition
 
