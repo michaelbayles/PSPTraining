@@ -9,7 +9,7 @@ namespace PSPTrainingTests
         [TestMethod]
         public void TestDavisEvData()
         {
-            var csv = new Day3().CreateCsv("EV.txt");
+            var csv = new Day3().CreatePlannedValueCsv("EV.txt");
             var rows = csv.Split('\n');
 
             Assert.AreEqual(Day3.Header, rows[0] + '\n');

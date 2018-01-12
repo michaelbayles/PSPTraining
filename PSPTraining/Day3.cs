@@ -9,7 +9,7 @@ namespace PSPTraining
         public static string Header = "Week Number,Plan Hours,Cumulative Plan Hours,Planned Value,Cumulative Planned Value\n";
         public static double DefaultHours = 15;
 
-        public string CreateCsv(string inputFile)
+        public List<Week> CreatePlannedValueWeeksFromInput(string inputFile)
         {
             var estimates = File.ReadAllLines(inputFile).Select(a => double.Parse(a)).ToList();
             var totalHours = estimates.Sum();
@@ -42,11 +42,18 @@ namespace PSPTraining
             //Need this once more so the very last week isn't forgotten
             SubmitPlannedValue(totalHours, currentWeek);
 
+            return weeks;
+        }
+
+        public string CreatePlannedValueCsv(string inputFile)
+        {
+            var weeks = CreatePlannedValueWeeksFromInput(inputFile);
+
             string ret = Header;
             for (int i = 0; i < weeks.Count; i++)
             {
                 //Output is 1 indexed
-                ret += $"{i + 1},{weeks[i].ToCsv()}\n";
+                ret += $"{i + 1},{weeks[i].ToPvCsv()}\n";
             }
 
             return ret;
