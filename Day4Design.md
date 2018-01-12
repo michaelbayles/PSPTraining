@@ -16,6 +16,15 @@
 
 1. Output the `List<Week>` as a CSV using the `ToEvCsv()` method. This method will be able to calculate planned/actual on the fly so we don't have to store them
 
+### EarnedValueCalculator Class Definition
+
+```
+public class EarnedValueCalculator
+{
+    public double WeeksRemainingUsingCumulative(int asOfWeek)
+    public double WeeksRemainingUsingWeek(int asOfWeek)
+}
+```
 
 ## Week Class Definition
 
